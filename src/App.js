@@ -4,14 +4,11 @@ import productsCatalog from './components/product_data';
 import images from './components/shop_data';
 import MyNavbar from './components/MyNavbar';
 import MyCarousel from './components/MyCarousel';
-// import Products from './components/Products';
 import Products from './components/AddToAmount';
 import Details from './components/Details';
 import Application from './components/History';
-// import {Link, superCart} from './components/Cart';
 import SuperCart from './components/SuperCart'
 import Default from './components/Default';
-// import forshop from '../public/img/forshop.png'; // with import
 import { Container, Row } from 'react-bootstrap';
 import './App.css';
 
@@ -32,13 +29,11 @@ const App = () => {
       <header>
       <MyNavbar />
       </header>
-      {/* <MyCarousel images={images} /> */}
       <Container>
         <section className="toRightSide">
         
         <button  className="ostoskarry" onClick={e => setShow(!show)}> {show ? "Näytä Ostoskori" : "Piilota Ostoskori"}
         </button>
-        {/* <Default /> */}
         </section>
         <section className="product">
         { show && 
@@ -49,7 +44,6 @@ const App = () => {
         </section>
         {!show &&
         <SuperCart products={products} setProducts={setProducts} />}
-          {/* <Application /> */}
 
       </Container>
     </div>
